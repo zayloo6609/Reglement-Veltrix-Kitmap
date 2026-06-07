@@ -3,115 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Règlement Veltrix - Kitmap</title>
+  <title>Règlement Veltrix • Kitmap</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
+      font-family: 'Inter', system-ui, sans-serif;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a2338 100%);
       color: #e0e0e0;
       margin: 0;
       padding: 20px;
-      line-height: 1.6;
+      min-height: 100vh;
     }
+
     .container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
-      background: rgba(20, 20, 35, 0.95);
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 0 30px rgba(0, 255, 100, 0.1);
-      border: 1px solid #00ff88;
+      background: rgba(15, 23, 42, 0.97);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 100, 255, 0.2);
+      border: 1px solid #0066ff33;
     }
-    h1 {
+
+    .header {
+      background: linear-gradient(90deg, #1e40af, #3b82f6);
+      padding: 50px 30px 40px;
       text-align: center;
-      color: #00ff88;
-      margin-bottom: 10px;
+      position: relative;
     }
-    .subtitle {
-      text-align: center;
-      color: #aaa;
-      font-size: 1.2em;
-      margin-bottom: 30px;
+
+    .logo {
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+      margin-bottom: 15px;
+      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.6));
     }
+
+    .header h1 {
+      margin: 10px 0 5px;
+      font-size: 2.8em;
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .header p {
+      font-size: 1.35em;
+      color: #a5b4fc;
+      margin: 0;
+    }
+
+    .content {
+      padding: 40px;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
-      margin: 20px 0;
-      background: rgba(0, 0, 0, 0.3);
+      margin: 25px 0;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      overflow: hidden;
     }
-    th, td {
-      padding: 14px 16px;
-      text-align: left;
-      border-bottom: 1px solid #333;
-    }
+
     th {
-      background: #00ff8833;
-      color: #00ff88;
+      background: #1e40af;
+      color: #60a5fa;
+      padding: 18px 16px;
+      text-align: left;
     }
+
+    td {
+      padding: 16px;
+      border-bottom: 1px solid #334155;
+    }
+
     tr:hover {
-      background: rgba(0, 255, 136, 0.1);
+      background: rgba(59, 130, 246, 0.1);
     }
+
     .sanction {
-      font-weight: bold;
-      color: #ff5555;
+      color: #f87171;
+      font-weight: 600;
     }
+
+    .note {
+      background: #1e2937;
+      padding: 22px;
+      border-radius: 12px;
+      border-left: 6px solid #3b82f6;
+      margin: 30px 0;
+    }
+
     .footer {
       text-align: center;
-      margin-top: 40px;
-      color: #666;
-      font-size: 0.9em;
+      padding: 35px;
+      color: #64748b;
+      background: rgba(0, 0, 0, 0.3);
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>📜 Règlement Veltrix Kitmap</h1>
-    <p class="subtitle">Dernière mise à jour : Juin 2026</p>
+    <div class="header">
+      <!-- Remplace le lien ci-dessous par ton logo une fois uploadé -->
+      <img src="https://raw.githubusercontent.com/tonpseudo/reglement-veltrix/main/logo.png" alt="Logo Veltrix" class="logo">
+      <h1>RÈGLEMENT VELTRIX</h1>
+      <p>Kitmap • Serveur Minecraft</p>
+    </div>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Infraction</th>
-          <th>Sanction</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>Ally abusif</strong> (être en f ally avec + de 3 factions)</td><td class="sanction">Reset des ally | Récidive : Disband de la faction</td></tr>
-        <tr><td><strong>Arnaque</strong></td><td class="sanction">12h</td></tr>
-        <tr><td><strong>Aveux de triche</strong></td><td class="sanction">7j</td></tr>
-        <tr><td><strong>Camping / Hosting / FullBack / UseBug</strong></td><td class="sanction">24h</td></tr>
-        <tr><td><strong>Contournement de sanction (ban)</strong></td><td class="sanction">DEF</td></tr>
-        <tr><td><strong>Contournement de sanction (mute)</strong></td><td class="sanction">1h</td></tr>
-        <tr><td><strong>Double CC</strong></td><td class="sanction">48h</td></tr>
-        <tr><td><strong>Échange interdit</strong> (argent IRL, stuff d'autres serveurs…)</td><td class="sanction">DEF</td></tr>
-        <tr><td><strong>Lag intentionnel</strong></td><td class="sanction">72h</td></tr>
-        <tr><td><strong>Menace de DOX / DDOS</strong></td><td class="sanction">DEF</td></tr>
-        <tr><td><strong>Menace de mort</strong></td><td class="sanction">12h</td></tr>
-        <tr><td><strong>Mensonge envers le staff / Perte de temps</strong></td><td class="sanction">24h</td></tr>
-        <tr><td><strong>Nick inapproprié / Usurpation d'identité</strong></td><td class="sanction">48h (sans avertissement)</td></tr>
-        <tr><td><strong>Système de farm automatique</strong></td><td class="sanction">72h</td></tr>
-        <tr><td><strong>Triche</strong> (autoclick inclus)</td><td class="sanction">30j</td></tr>
-        <tr><td><strong>Triche grave</strong> (killaura, etc.)</td><td class="sanction">Ban Version</td></tr>
-        <tr><td><strong>Tuer / Déranger un KillBuilder</strong></td><td class="sanction">6h</td></tr>
-        <tr><td><strong>Utilisation d'un double compte</strong></td><td class="sanction">72h</td></tr>
-        <tr><td><strong>Vol de mob</strong></td><td class="sanction">24h</td></tr>
-        <tr><td><strong>Nom de faction insultant</strong></td><td class="sanction">12h</td></tr>
-        <tr><td><strong>Trahison</strong></td><td class="sanction">72h</td></tr>
-        <tr><td><strong>Cache Stuff</strong></td><td class="sanction">72h</td></tr>
-        <tr><td><strong>FreeKill</strong></td><td class="sanction">7d</td></tr>
-        <tr><td><strong>FreeKill Abusif</strong></td><td class="sanction">DEF</td></tr>
-        <tr><td><strong>Dc Coinflip</strong></td><td class="sanction">6h</td></tr>
-        <tr><td><strong>Prepearl Commandes</strong></td><td>Autorisé</td></tr>
-        <tr><td><strong>Full back</strong></td><td class="sanction">3d (3 fois max par joueur)</td></tr>
-        <tr><td><strong>Non respect de conditions 1v1 2v2 etc</strong></td><td class="sanction">2d</td></tr>
-        <tr><td><strong>Insultes</strong></td><td>Durée laissée à l'appréciation du staff selon la gravité</td></tr>
-      </tbody>
-    </table>
+    <div class="content">
+      <table>
+        <thead>
+          <tr>
+            <th>Infraction</th>
+            <th>Sanction</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Ally abusif</strong> (ally avec + de 3 factions)</td><td class="sanction">Reset des ally | Récidive : Disband</td></tr>
+          <tr><td><strong>Arnaque</strong></td><td class="sanction">12h</td></tr>
+          <tr><td><strong>Aveux de triche</strong></td><td class="sanction">7j</td></tr>
+          <tr><td><strong>Camping / Hosting / FullBack / UseBug</strong></td><td class="sanction">24h</td></tr>
+          <tr><td><strong>Contournement de sanction (ban)</strong></td><td class="sanction">DEF</td></tr>
+          <tr><td><strong>Contournement de sanction (mute)</strong></td><td class="sanction">1h</td></tr>
+          <tr><td><strong>Double CC</strong></td><td class="sanction">48h</td></tr>
+          <tr><td><strong>Échange interdit</strong> (IRL, autres serveurs...)</td><td class="sanction">DEF</td></tr>
+          <tr><td><strong>Lag intentionnel</strong></td><td class="sanction">72h</td></tr>
+          <tr><td><strong>Menace de DOX / DDOS</strong></td><td class="sanction">DEF</td></tr>
+          <tr><td><strong>Menace de mort</strong></td><td class="sanction">12h</td></tr>
+          <tr><td><strong>Mensonge staff / Perte de temps</strong></td><td class="sanction">24h</td></tr>
+          <tr><td><strong>Nick inapproprié / Usurpation</strong></td><td class="sanction">48h</td></tr>
+          <tr><td><strong>Farm automatique (AFK)</strong></td><td class="sanction">72h</td></tr>
+          <tr><td><strong>Triche (autoclick inclus)</strong></td><td class="sanction">30j</td></tr>
+          <tr><td><strong>Triche grave</strong></td><td class="sanction">Ban Version</td></tr>
+          <tr><td><strong>Tuer / Déranger un KillBuilder</strong></td><td class="sanction">6h</td></tr>
+          <tr><td><strong>Double compte (avantage)</strong></td><td class="sanction">72h</td></tr>
+          <tr><td><strong>Vol de mob</strong></td><td class="sanction">24h</td></tr>
+          <tr><td><strong>Nom de faction insultant</strong></td><td class="sanction">12h</td></tr>
+          <tr><td><strong>Trahison</strong></td><td class="sanction">72h</td></tr>
+          <tr><td><strong>Cache Stuff</strong></td><td class="sanction">72h</td></tr>
+          <tr><td><strong>FreeKill</strong></td><td class="sanction">7d</td></tr>
+          <tr><td><strong>FreeKill Abusif</strong></td><td class="sanction">DEF</td></tr>
+          <tr><td><strong>Dc Coinflip</strong></td><td class="sanction">6h</td></tr>
+          <tr><td><strong>Full back</strong></td><td class="sanction">3d (max 3 fois)</td></tr>
+          <tr><td><strong>Non respect 1v1 / 2v2 etc</strong></td><td class="sanction">2d</td></tr>
+          <tr><td><strong>Insultes</strong></td><td>À l'appréciation du staff</td></tr>
+        </tbody>
+      </table>
 
-    <p><strong>Modifications de sanction :</strong> Le staff se réserve le droit de modifier ou d'ajouter une sanction s'il juge une action injuste. (<strong>Seuls les <span style="color:#00ff88;">Admin+</span> peuvent le faire</strong>)</p>
+      <div class="note">
+        <strong>Modifications de sanction :</strong> Le staff se réserve le droit de modifier ou d'ajouter une sanction selon la gravité de l’action.<br>
+        <strong>(Uniquement Admin+)</strong>
+      </div>
+    </div>
 
     <div class="footer">
-      <p>Veltrix Kitmap © 2026 • Bonne chance sur le serveur !</p>
+      Veltrix Kitmap © 2026 • Respectez les règles et profitez du serveur !
     </div>
   </div>
 </body>
